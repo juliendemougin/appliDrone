@@ -1,0 +1,7 @@
+{
+  "name": "drone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
