@@ -22,6 +22,7 @@
 </template>
 
 <script lang="ts">
+// import { IonContent, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
@@ -29,8 +30,8 @@ export default defineComponent({
   name: 'HomePage',
   components: {
     IonContent,
-    IonHeader,
     IonPage,
+    IonHeader,
     IonTitle,
     IonToolbar
   }
