@@ -5,25 +5,25 @@
           <router-link id="closeBtn" to="#" class="nav__close"><img src="./icons/icon_cross.svg" alt="icône fermer"></router-link>
           <ul class="nav__list">
               <li class="nav__item">
-                <router-link class="nav__link" to="profil">Profil</router-link>
+                <router-link class="nav__link" to="/profil">Profil</router-link>
               </li>
               <li class="nav__item">
-                <router-link class="nav__link" to="documents">Documents</router-link>
+                <router-link class="nav__link" to="/documents">Documents</router-link>
               </li>
               <li class="nav__item">
-                <router-link class="nav__link" to="map">Carte</router-link>
+                <router-link class="nav__link" to="/map">Carte</router-link>
               </li>
               <li class="nav__item">
-                <router-link class="nav__link" to="liens">Documentation</router-link>
+                <router-link class="nav__link" to="/liens">Documentation</router-link>
               </li>
               <li class="nav__item">
-                <router-link class="nav__link" to="abo">S'abonner</router-link>
+                <router-link class="nav__link" to="/abo">S'abonner</router-link>
               </li>
               <li class="nav__item">
                 <router-link class="nav__link" to="#">Deconnexion</router-link>
               </li>
               <li class="nav__item">
-                <router-link class="nav__link" to="contact">Contact</router-link>
+                <router-link class="nav__link" to="c/ontact">Contact</router-link>
               </li>
           </ul>
         </div>
