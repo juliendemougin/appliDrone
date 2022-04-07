@@ -11,14 +11,21 @@ import DocumentsPage from '../views/DocumentsPage.vue';
 import ProfilPage from '../views/profil/ProfilPage.vue';
 import ModifProfilPage from '../views/profil/ModifProfilPage.vue';
 import ModifPasswordPage from '../views/profil/ModifPasswordPage.vue';
+
+import AboPage from '../views/AboPage.vue';
 import CarteDrone from '../views/CarteDrone.vue';
+import ConditionPage from '../views/ConditionPage.vue';
+import ContactPage from '../views/ContactPage.vue';
+import LiensPage from '../views/LiensPage.vue';
 import MeteoPage from '../views/MeteoPage.vue';
+import PolitiquePage from '../views/PolitiquePage.vue';
+import PreparationPage from '../views/PreparationPage.vue';
 
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/home'
+    redirect: '/cartedrone'
   },
   {
     path: '/home',
@@ -74,7 +81,37 @@ const routes: Array<RouteRecordRaw> = [
     path: '/meteo',
     name: 'MeteoPage',
     component: MeteoPage
-  }
+  },
+  {
+    path: '/abo',
+    name: 'AboPage',
+    component: AboPage
+  },
+  {
+    path: '/condition',
+    name: 'ConditionPage',
+    component: ConditionPage
+  },
+  {
+    path: '/contact',
+    name: 'ContactPage',
+    component: ContactPage
+  },
+  {
+    path: '/liens',
+    name: 'LiensPage',
+    component: LiensPage
+  },
+  {
+    path: '/politique',
+    name: 'PolitiquePage',
+    component: PolitiquePage
+  },
+  {
+    path: '/preapration',
+    name: 'PreparationPage',
+    component: PreparationPage
+  },
 ]
 
 const router = createRouter({

@@ -1,7 +1,7 @@
 <template>
     <ion-page>
         <ion-content>
-            meteo
+            Abonnement
         </ion-content>
         <ion-footer class="footer">
             <!-- <footer class="footer"> -->
@@ -33,7 +33,7 @@
   import { IonPage, IonContent } from '@ionic/vue';
 
   export default defineComponent({
-    name: 'MeteoPage',
+    name: 'AboPage',
     components: {
       IonPage,
       IonContent
