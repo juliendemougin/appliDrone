@@ -2,7 +2,7 @@
   <ion-app>
     <ion-header>
         <div id="nav" class="nav">
-          <router-link id="closeBtn" to="#" class="nav__close"><img src="src/icons/icon_cross.svg" alt="icône fermer"></router-link>
+          <router-link id="closeBtn" to="#" class="nav__close"><img src="./icons/icon_cross.svg" alt="icône fermer"></router-link>
           <ul class="nav__list">
               <li class="nav__item"><a class="nav__link" href="profil.html">Profil</a></li>
               <li class="nav__item"><a class="nav__link" href="documents.html">Documents</a></li>
@@ -25,7 +25,7 @@
         </router-link>
     </ion-header>
     <ion-router-outlet></ion-router-outlet>
-    <component :is="'script'" :src="'/public/assets/js/menu.js'"></component>
+    <component :is="'script'" :src="'../assets/js/menu.js'"></component>
   </ion-app>
 </template>
 
