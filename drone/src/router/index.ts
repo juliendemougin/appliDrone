@@ -12,6 +12,8 @@ import ProfilPage from '../views/profil/ProfilPage.vue';
 import ModifProfilPage from '../views/profil/ModifProfilPage.vue';
 import ModifPasswordPage from '../views/profil/ModifPasswordPage.vue';
 import CarteDrone from '../views/CarteDrone.vue';
+import MeteoPage from '../views/MeteoPage.vue';
+
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -67,6 +69,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/cartedrone',
     name: 'CarteDrone',
     component: CarteDrone
+  },
+  {
+    path: '/meteo',
+    name: 'MeteoPage',
+    component: MeteoPage
   }
 ]
 

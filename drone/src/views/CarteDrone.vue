@@ -4,19 +4,19 @@
     <ion-footer class="footer">
         <!-- <footer class="footer"> -->
         <div class="footer__border footer__border--bord">
-            <router-link to="documents.html">
+            <router-link to="/documents">
                 <img class="footer__icon" src="../icons/footer/icon_folder.svg" alt="image d'un dossier">
             </router-link>
         </div>
         <div class="footer__border footer__border--bord">
-            <a href="map.html">
+            <router-link to="/cartedrone">
                 <img class="footer__icon" src="../icons/footer/icon_map.svg" alt="image d'un carte">
-            </a>
+            </router-link>
         </div>
         <div class="footer__border">
-            <a href="meteo.html">
+            <router-link to="/meteo">
                 <img class="footer__icon" src="../icons/footer/icon_weather.svg" alt="image d'un nuage">
-            </a>
+            </router-link>
         </div>
     <!-- </footer> -->
     </ion-footer>
