@@ -108,7 +108,7 @@ const routes: Array<RouteRecordRaw> = [
     component: PolitiquePage
   },
   {
-    path: '/preapration',
+    path: '/preparation',
     name: 'PreparationPage',
     component: PreparationPage
   },

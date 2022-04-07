@@ -1,7 +1,17 @@
 <template>
     <ion-page>
         <ion-content>
-            Contact
+          <main class="container contact">
+            <h3 class="contact__titre">Contactez-nous</h3>
+            <form class="contact__form">
+                <input class="input" type="text" placeholder="Votre nom"><br>
+                <input class="input" type="email" placeholder="Votre adresse e-mail"><br>
+                <input class="input input--area" type="textarea" placeholder="Votre message"><br>
+                <button class="lg_button lg_button--var" type="submit">ENVOYER</button><br>
+            </form>
+            <p class="contact__desc">Voir nos <router-link to="/condition">conditions d'utilisation</router-link></p>
+            <p class="contact__desc contact__desc--var">Voir notre <router-link to="/politique">politique de confidentialité</router-link></p>
+          </main>
         </ion-content>
         <ion-footer class="footer">
             <!-- <footer class="footer"> -->
