@@ -4,13 +4,27 @@
         <div id="nav" class="nav">
           <router-link id="closeBtn" to="#" class="nav__close"><img src="./icons/icon_cross.svg" alt="icône fermer"></router-link>
           <ul class="nav__list">
-              <li class="nav__item"><a class="nav__link" href="profil.html">Profil</a></li>
-              <li class="nav__item"><a class="nav__link" href="documents.html">Documents</a></li>
-              <li class="nav__item"><a class="nav__link" href="map.html">Carte</a></li>
-              <li class="nav__item"><a class="nav__link" href="liens.html">Documentation</a></li>
-              <li class="nav__item"><a class="nav__link" href="abo.html">S'abonner</a></li>
-              <li class="nav__item"><a class="nav__link" href="#">Deconnexion</a></li>
-              <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+              <li class="nav__item">
+                <router-link class="nav__link" to="profil">Profil</router-link>
+              </li>
+              <li class="nav__item">
+                <router-link class="nav__link" to="documents">Documents</router-link>
+              </li>
+              <li class="nav__item">
+                <router-link class="nav__link" to="map">Carte</router-link>
+              </li>
+              <li class="nav__item">
+                <router-link class="nav__link" to="liens">Documentation</router-link>
+              </li>
+              <li class="nav__item">
+                <router-link class="nav__link" to="abo">S'abonner</router-link>
+              </li>
+              <li class="nav__item">
+                <router-link class="nav__link" to="#">Deconnexion</router-link>
+              </li>
+              <li class="nav__item">
+                <router-link class="nav__link" to="contact">Contact</router-link>
+              </li>
           </ul>
         </div>
   
