@@ -23,7 +23,7 @@
                 <router-link class="nav__link" to="#">Deconnexion</router-link>
               </li>
               <li class="nav__item">
-                <router-link class="nav__link" to="c/ontact">Contact</router-link>
+                <router-link class="nav__link" to="/contact">Contact</router-link>
               </li>
           </ul>
         </div>
