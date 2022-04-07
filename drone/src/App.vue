@@ -25,6 +25,7 @@
         </router-link>
     </ion-header>
     <ion-router-outlet></ion-router-outlet>
+    <component :is="'script'" :src="'/public/assets/js/menu.js'"></component>
   </ion-app>
 </template>
 
