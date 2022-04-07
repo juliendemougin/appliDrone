@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title style="color: black;">DRONE</ion-title>
+        <ion-title>DRONE</ion-title>
       </ion-toolbar>
     </ion-header>
     
@@ -12,7 +12,7 @@
           <ion-title size="large">Blank</ion-title>
         </ion-toolbar>
       </ion-header>
-      <!-- <LeHeader></LeHeader> -->
+    
       <div id="container">
         <strong>Ready to create an app?</strong>
         <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
@@ -25,7 +25,6 @@
 // import { IonContent, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 import { defineComponent } from 'vue';
-// import LeHeader from '../components/LeHeader.vue';
 
 export default defineComponent({
   name: 'HomePage',
@@ -34,8 +33,7 @@ export default defineComponent({
     IonPage,
     IonHeader,
     IonTitle,
-    IonToolbar,
-    // LeHeader
+    IonToolbar
   }
 });
 </script>
