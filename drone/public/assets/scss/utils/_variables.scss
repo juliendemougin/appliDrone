@@ -1,0 +1,47 @@
+// Variables basique
+/* Color styles */
+$violet:                #1C1738;
+$magnolia:              #F7F0F5;
+$almond:                #DECBB7;
+$grey:                  #8F857D;
+$flame:                 #E94E1B;
+
+/* Text-size styles */
+$title-xxl: rem(80);
+$title-xl: rem(54);
+$title-lg: rem(24);
+$text-xxl: rem(48);
+$text-xl: rem(22);
+$text-md: rem(18);
+$text-sm: rem(11);
+
+/* Font-family styles */
+
+@font-face {
+    font-family: Modern Sans Light;
+    src: url("../../src/fonts/ModernSans-Light.otf");
+}
+
+@font-face {
+    font-family: Modern Sans;
+    src: url('../../src/fonts/ModernSans.ttf')
+}
+
+$font-titre: 'Modern Sans';
+$font-text: 'Modern Sans Light';
+
+/* Font variantes */
+$letter-spacing: 0.05em;
+
+/* Espaces */
+$space1x: rem(8);
+$space2x: rem(16);
+$space3x: rem(24);
+$space4x: rem(48);
+
+
+
+
+
+
+

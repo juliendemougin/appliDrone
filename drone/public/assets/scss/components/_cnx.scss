@@ -1,0 +1,39 @@
+.connexion {
+    padding-top: rem(209);
+
+    &__oubli {
+        color: $magnolia;
+        text-align: right;
+        font-size: rem(14);
+
+        &__container {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__checkbox {
+        margin-top: rem(5);
+    }
+
+    &__button {
+        margin-top: rem(60);
+    }
+
+    &__ou {
+        margin-top: rem(30);
+        text-align: center;
+        min-width: 100%;
+        display: inline;
+
+        &__container {
+            display: flex;
+        }
+    }
+
+    &__sso {
+        margin: rem(30) rem(30) 0;
+        display: flex;
+        justify-content: space-between;
+    }
+}

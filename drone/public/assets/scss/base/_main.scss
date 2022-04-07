@@ -1,0 +1,50 @@
+// Téléphone
+@media (max-width: 800px) {
+	*,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
+    }
+
+    body {
+        background-color: $violet;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: $font-text;
+        color: $magnolia;
+    }
+
+    a {
+        text-decoration: none;
+        color: $flame;
+    }
+
+    .container {
+        padding: rem(125) rem(55) 0 rem(55);
+    }
+}
+//Tablette
+@media (min-width: 801px) {
+	*,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
+    }
+    body {
+        background-color: $violet;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: $font-text;
+        color: $magnolia;
+    }
+
+    .container {
+        padding: rem(125) rem(250) 0 rem(250);
+    }
+}

@@ -1,0 +1,57 @@
+hr {
+    border: rem(0.1) solid $magnolia;
+    margin-top: rem(47);
+}
+
+.document {
+    border: 1px solid $flame;
+    border-radius: rem(5);
+    min-width: rem(120);
+    min-height: rem(150);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 rem(15);
+
+    &__title {
+        font-size: rem(14);
+        text-align: center;
+    }
+
+    &__date {
+        font-size: rem(14);
+        text-align: center;
+    }
+
+    &__container {
+        margin-top: rem(45);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5%;
+    }
+
+    &__button {
+        text-transform: uppercase;
+        font-family: $font-titre;
+        font-size: rem(10);
+        min-width: 100%;
+        min-height: rem(25);
+    }
+
+    &__item {
+        min-width: 100%;
+    }
+}
+
+@media (min-width: 801px) {
+    .container--docs {
+        padding: rem(125) rem(100) 0 rem(100);
+    }
+
+    .document {
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

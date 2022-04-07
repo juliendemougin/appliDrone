@@ -1,0 +1,47 @@
+.abo {
+    &__titre {
+        font-size: rem(28);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: rem(25);
+    }
+    &__sstitre {
+        font-size: rem(16);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: rem(20);
+        margin-top: rem(20);
+    }
+    &__desc {
+        text-align: center;
+        font-size: rem(16);
+        font-family: $font-text;
+        &--color {
+            color: $flame;
+        }
+    }
+    &__choix {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: rem(50);
+        margin-bottom: rem(30);
+        text-align: center;
+        
+    }
+    &__mois {
+        padding-top: rem(10);
+        padding-bottom: rem(10);
+        height: rem(80);
+        &--var {
+            border: 1px solid $flame;
+            border-radius: rem(5);
+        }
+    }
+    &__nbmois {
+        font-size: rem(20);
+        font-weight: bold;
+    }
+}
+.surbutton {
+    text-align: center;
+}

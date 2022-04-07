@@ -1,0 +1,31 @@
+.reinit {
+    &__title {
+        text-align: center;
+        font-size: rem(24);
+    }
+
+    &__subtitle {
+        text-align: center;
+        font-size: rem(16);
+        color: $grey;
+        margin-top: rem(40);
+    }
+
+    &__email {
+        margin-top: rem(70);
+    }
+
+    &__button {
+        margin-top: rem(45);
+    }
+}
+
+@media (min-width: 801px) {
+    .container--reset {
+        padding: rem(210) rem(190) 0 rem(200);
+    } 
+
+    .reinit {
+        padding: 0 rem(50);
+    }
+}

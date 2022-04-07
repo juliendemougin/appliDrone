@@ -1,0 +1,57 @@
+.meteo {
+    &__titre {
+        font-size: rem(22);
+        text-align: center;
+        margin-bottom: rem(20);
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(5);
+    }
+    &__card {
+        padding: rem(5);
+        height: rem(170);
+        background-color: $magnolia;
+        border-radius: rem(5);
+        text-align: center;
+    }
+    &__card7 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: rem(5);
+        background-color: $magnolia;
+        color: black;
+        border-radius: rem(5);
+        margin-top: rem(10);
+        margin-bottom: rem(10);
+        height: rem(50);
+    }
+}
+.carte {
+    &__desc {
+        color: black;
+        margin-top: rem(20);
+        margin-bottom: rem(10);
+        &--var {
+            margin-top: rem(5);
+        }
+    }
+    &__icon {
+        color: black;
+        height: rem(50);
+        width: rem(50);
+    }
+}
+.carte7 {
+    &__desc {
+        color: black;
+        place-self: center;
+    }
+    &__icon {
+        color: black;
+        height: rem(20);
+        width: rem(20);
+        place-self: center;
+    }
+}
