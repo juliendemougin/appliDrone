@@ -1,28 +1,28 @@
 <template>
   <ion-app>
     <ion-header>
-      <div id="nav" class="nav">
-        <a id="closeBtn" href="#" class="nav__close"><img src="src/icons/icon_cross.svg" alt="icône fermer"></a>
-        <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link" href="profil.html">Profil</a></li>
-            <li class="nav__item"><a class="nav__link" href="documents.html">Documents</a></li>
-            <li class="nav__item"><a class="nav__link" href="map.html">Carte</a></li>
-            <li class="nav__item"><a class="nav__link" href="liens.html">Documentation</a></li>
-            <li class="nav__item"><a class="nav__link" href="abo.html">S'abonner</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Deconnexion</a></li>
-            <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-
-      <a href="#" id="openBtn">
-      <div>
-        <span class="nav__icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </div>
-      </a>
+        <div id="nav" class="nav">
+          <router-link id="closeBtn" to="#" class="nav__close"><img src="src/icons/icon_cross.svg" alt="icône fermer"></router-link>
+          <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="profil.html">Profil</a></li>
+              <li class="nav__item"><a class="nav__link" href="documents.html">Documents</a></li>
+              <li class="nav__item"><a class="nav__link" href="map.html">Carte</a></li>
+              <li class="nav__item"><a class="nav__link" href="liens.html">Documentation</a></li>
+              <li class="nav__item"><a class="nav__link" href="abo.html">S'abonner</a></li>
+              <li class="nav__item"><a class="nav__link" href="#">Deconnexion</a></li>
+              <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+  
+        <router-link to="#" id="openBtn">
+        <div>
+          <span class="nav__icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        </router-link>
     </ion-header>
     <ion-router-outlet></ion-router-outlet>
   </ion-app>
