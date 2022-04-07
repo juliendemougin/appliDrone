@@ -19,12 +19,12 @@ $text-sm: rem(11);
 
 @font-face {
     font-family: Modern Sans Light;
-    src: url("../../src/fonts/ModernSans-Light.otf");
+    src: url("../../../src/fonts/ModernSans-Light.otf");
 }
 
 @font-face {
     font-family: Modern Sans;
-    src: url('../../src/fonts/ModernSans.ttf')
+    src: url('../../../src/fonts/ModernSans.ttf')
 }
 
 $font-titre: 'Modern Sans';
