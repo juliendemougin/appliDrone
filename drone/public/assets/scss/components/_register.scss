@@ -1,0 +1,19 @@
+.inscription {
+    &__checkbox {
+        margin-top: rem(30);
+    }
+
+    &__button {
+        margin-top: rem(70);
+    }
+
+    &__link {
+        color: $flame;
+    }
+}
+
+@media (min-width: 801px) {
+    .inscription {
+        margin-top: rem(100);
+    }
+}

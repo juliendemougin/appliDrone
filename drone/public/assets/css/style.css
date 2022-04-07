@@ -3,12 +3,12 @@
 /* Font-family styles */
 @font-face {
   font-family: Modern Sans Light;
-  src: url("../../src/fonts/ModernSans-Light.otf");
+  src: url("../fonts/ModernSans-Light.otf");
 }
 
 @font-face {
   font-family: Modern Sans;
-  src: url("../../src/fonts/ModernSans.ttf");
+  src: url("../fonts/ModernSans.ttf");
 }
 
 /* Font variantes */
@@ -166,12 +166,12 @@
 }
 
 .input--email {
-  background: url(../../src/icons/icon_mail.svg) no-repeat scroll 0.4375rem 0.4375rem;
+  background: url(../../../src/icons/icon_mail.svg) no-repeat scroll 0.4375rem 0.4375rem;
   padding-left: 3.125rem;
 }
 
 .input--password {
-  background: url(../../src/icons/icon_password.svg) no-repeat 0.4375rem 0.375rem;
+  background: url(../../../src/icons/icon_password.svg) no-repeat 0.4375rem 0.375rem;
   padding-left: 3.125rem;
 }
 

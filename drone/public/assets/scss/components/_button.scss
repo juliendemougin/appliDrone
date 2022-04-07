@@ -1,0 +1,74 @@
+.input {
+    background-color: $violet;
+    border: 1px solid $flame;
+    border-color: $flame;
+    border-radius: rem(3);
+    color: $magnolia;
+    font-family: $font-text;
+    font-size: rem(16);
+    margin-top: rem(15);
+    margin-bottom: rem(15);
+    padding-left: rem(20);
+    height: rem(50);
+    min-width: 100%;
+    
+}
+
+.input--email {
+    background: url(../../src/icons/icon_mail.svg) no-repeat scroll rem(7) rem(7);
+    padding-left: rem(50);
+}
+
+.input--password {
+    background: url(../../src/icons/icon_password.svg) no-repeat rem(7) rem(6);
+    padding-left: rem(50);
+}
+
+.lg_button {
+    all: unset;
+    text-transform: uppercase;
+    color: $magnolia;
+    font-size: rem(16);
+    background-color: $flame;
+    border-radius: rem(10);
+    font-family: $font-titre;
+    min-width: 100%;
+    height: rem(50);
+    text-align: center;
+}
+
+.sm_button {
+    all: unset;
+    text-transform: uppercase;
+    color: $magnolia;
+    font-size: rem(10);
+    font-family: $font-titre;
+    background-color: $flame;
+    border-radius: rem(5);
+    min-width: rem(120);
+    height: rem(38);
+    text-align: center;
+}
+
+.upper-buttons {
+    display: flex;
+    justify-content: space-between;
+
+    &--stats {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.select {
+    text-transform: uppercase;
+    font-size: rem(10);
+    color: $magnolia;
+    background-color: $flame;
+    text-align: left;
+    border-radius: rem(5);
+    border: 0;
+    padding-left: rem(10);
+    min-width: rem(138);
+    min-height: rem(38);
+}

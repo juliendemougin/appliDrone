@@ -1,0 +1,27 @@
+.liens {
+    color: $violet;
+    &__card {
+        background-color: $magnolia;
+        height: rem(40);
+        border-radius: rem(5);
+        display: grid;
+        grid-template-columns: auto rem(50);
+        padding-left: rem(10);
+        padding-right: rem(10);
+        justify-items: end;
+        align-items: center;
+        margin-top: rem(30);
+        
+    }
+    &__desc {
+        grid-column: 1;
+        justify-self: start;
+        font-size: rem(16);
+    }
+    &__img {
+        color: $magnolia;
+        justify-items: end;
+        text-align: center;
+    }
+
+}

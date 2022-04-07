@@ -1,0 +1,25 @@
+.contact {
+    &__form {
+        text-align: center;
+    }
+    &__titre {
+        margin-top: rem(30);
+        margin-bottom: rem(30);
+        color: $magnolia;
+        font-size: rem(24);
+        text-align: center;
+    }
+    &__desc {
+        color: $magnolia;
+        padding-top: rem(25);
+        &--var {
+            padding-top: rem(5);
+        } 
+    }
+}
+.input {
+    &--area {
+        height: rem(200);
+        margin-bottom: rem(20);
+    }
+}
