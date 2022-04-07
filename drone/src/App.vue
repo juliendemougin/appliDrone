@@ -11,7 +11,7 @@
                 <router-link class="nav__link" to="/documents">Documents</router-link>
               </li>
               <li class="nav__item">
-                <router-link class="nav__link" to="/map">Carte</router-link>
+                <router-link class="nav__link" to="/cartedrone">Carte</router-link>
               </li>
               <li class="nav__item">
                 <router-link class="nav__link" to="/liens">Documentation</router-link>
