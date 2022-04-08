@@ -1,7 +1,7 @@
 <template>
     <ion-page>
         <ion-content>
-            sfd
+            Politique
         </ion-content>
         <ion-footer class="footer">
             <!-- <footer class="footer"> -->
@@ -22,7 +22,6 @@
             </div>
         <!-- </footer> -->
         </ion-footer>
-        
     </ion-page>
 </template>
 
@@ -34,7 +33,7 @@
   import { IonPage, IonContent } from '@ionic/vue';
 
   export default defineComponent({
-    name: 'CarteDrone',
+    name: 'PolitiquePage',
     components: {
       IonPage,
       IonContent

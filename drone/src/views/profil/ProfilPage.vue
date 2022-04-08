@@ -3,12 +3,12 @@
         <ion-content>
             <main class="container container--profil">
                 <div class="upper-buttons">
-                    <form action="stats.html">
+                    <router-link to="/stats">
                         <input class="sm_button sm_button--profil-tab" type="submit" value="Statistiques">
-                    </form>
-                    <form action="preparation.html">
+                    </router-link>
+                    <router-link to="/preparation">
                         <input class="sm_button sm_button--profil-tab" type="submit" value="Preparer un vol">
-                    </form>
+                    </router-link>
                 </div>
                 <article class="drones">
                     <h2 class="drones__title">Drones</h2>
