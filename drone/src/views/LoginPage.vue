@@ -68,7 +68,7 @@ export default defineComponent({
         router.push({path : "/home", replace: true });
       } catch (error) {
         console.log(error);
-        handleAlert(error.message, true);
+        // handleAlert(error.message, true);
       }
     };
     return {
