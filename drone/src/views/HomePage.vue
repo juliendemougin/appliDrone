@@ -56,14 +56,13 @@ export default defineComponent({
   },
 
   setup() {
-    const { logout } = useFirebaseAuth();
     const router = useRouter();
     const doLogout = () => {
       router.replace({ path: "/login" });
     };
 
     return {
-      doLogout,
+      doLogout
     };
   },
 });
