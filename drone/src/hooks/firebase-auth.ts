@@ -11,7 +11,6 @@ if (firebase.apps.length === 0) {
 
 type TState = {
     error: Error | null;
-    loading: boolean;
     user: firebase.auth.UserCredential | null | firebase.User;
     userData: any;
     initalized: boolean;
@@ -19,7 +18,6 @@ type TState = {
 
 const state = reactive<TState>({
     user: null,
-    loading: true,
     error: null,
     userData: null,
     initalized: false
@@ -47,27 +45,23 @@ export default function () {
      * @param password
      */
     const login = (username: string, password: string) => {
-        state.loading = true;
         return firebase
             .auth()
             .signInWithEmailAndPassword(username, password)
             .then(
                 async (user) => {
                     state.error = null;
-                    state.loading = false;
                     state.user = user;
                     state.userData = await getUserData();
                     return user;
                 },
                 (error) => {
                     state.error = error;
-                    state.loading = false;
                     throw error;
                 }
             )
             .catch((error) => {
                 state.error = error;
-                state.loading = false;
                 throw error;
             });
     };
@@ -82,24 +76,20 @@ export default function () {
             .then(
                 () => {
                     state.error = null;
-                    state.loading = false;
                     state.user = null;
                     state.userData = null;
                 },
                 (error) => {
                     state.error = error;
-                    state.loading = false;
                 }
             )
             .catch((error) => {
                 state.error = error;
-                state.loading = false;
             });
     };
 
     const authCheck = () => {
         return new Promise((resolve, reject) => {
-            state.loading = true;
             !state.initalized &&
                 firebase.auth().onAuthStateChanged(async (_user) => {
                     if (_user) {
@@ -108,8 +98,8 @@ export default function () {
                     } else {
                         state.user = null;
                     }
-                    state.loading = false;
                     state.initalized = true;
+                    console.log(_user);
                     resolve(true);
                 });
         });
