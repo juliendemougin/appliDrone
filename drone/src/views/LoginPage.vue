@@ -90,8 +90,7 @@ export default defineComponent({
       credentials,
       doLogin,
       handleChange,
-      socialGoogleLogin,
-      // socialFacebookLogin
+      socialGoogleLogin
     };
   },
 });
