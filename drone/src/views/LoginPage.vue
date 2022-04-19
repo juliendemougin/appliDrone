@@ -23,7 +23,7 @@
 import firebase from 'firebase/compat/app';
 import useFirebaseAuth from "../hooks/firebase-auth";
 import { defineComponent, ref } from "vue";
-import { IonContent, IonPage, IonInput, IonButton, IonItem, IonImg } from "@ionic/vue";
+import { IonContent, IonPage, IonInput, IonButton, IonItem, IonImg, alertController } from "@ionic/vue";
 import { useRouter } from "vue-router";
 
 export default defineComponent({
@@ -50,6 +50,16 @@ export default defineComponent({
       const name: string = (e?.target as any)?.name;
       credentials.value[name as string] = e.detail.value;
     };
+
+    const handleAlert = (message: string, isError = false) => {
+      alertController
+        .create({
+          header: isError ? "Error Message" : "Notice",
+          message: message,
+          buttons: ["OK"],
+        })
+        .then((t) => t.present());
+    };
    
     const doLogin = async () => {
       try {
@@ -59,7 +69,7 @@ export default defineComponent({
         router.push({path : "/home", replace: true });
       } catch (error: any) {
         console.log(error);
-        // handleAlert(error.message, true);
+        handleAlert(error.message, true);
       }
     };
 
