@@ -31,14 +31,7 @@
 </template>
 
 <script lang="ts">
-// import { IonContent, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
-import {
-  IonContent,
-  IonHeader,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-} from "@ionic/vue";
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/vue";
 import { defineComponent } from "vue";
 import { useRouter } from "vue-router";
 import useFirebaseAuth from "../hooks/firebase-auth";
@@ -57,8 +50,12 @@ export default defineComponent({
 
   setup() {
     const router = useRouter();
-    const doLogout = () => {
-      router.replace({ path: "/login" });
+    const { logout } = useFirebaseAuth();
+
+    const doLogout = async () => {
+      await logout();
+      router.options.scrollBehavior;
+      router.replace({ path: '/login', replace: true });
     };
 
     return {
