@@ -11,7 +11,7 @@
                 <div class="inscription__checkbox">
                     <label class="b-contain">
                         <span>J'accepte les <router-link class="inscription__link" to="conditions">conditions d'utilisation</router-link></span>
-                        <input type="checkbox">
+                        <input type="checkbox" required>
                         <div class="b-input"></div>
                     </label>
                 </div>
@@ -33,7 +33,8 @@ export default {
             nom: '',
             email: '',
             errorMessage: '',
-            token: ''
+            token: '',
+            errors: {}
         }
     },
 
@@ -60,19 +61,15 @@ export default {
                     })
                 })
                 .then(() => {
-                    if(this.token === "") {
-                        throw new Exception ("Une erreur s'est produite lors de la création de votre compte, veuillez réessayer.")
-                    } else {
-                        var form = new FormData();
-                        form.append('pseudo', this.pseudo);
-                        form.append('nom', this.nom);
-                        form.append('prenom', this.prenom);
-                        form.append('email', this.email);
-                        form.append('fid', this.token);
-                        axios.post('https://nervous-euclid.82-165-48-211.plesk.page/adduser', form);
-                        this.$router.push('/login');
-                        console.log(firebase.auth().currentUser.displayName);
-                    }
+                    var form = new FormData();
+                    form.append('pseudo', this.pseudo);
+                    form.append('nom', this.nom);
+                    form.append('prenom', this.prenom);
+                    form.append('email', this.email);
+                    form.append('fid', this.token);
+                    axios.post('https://nervous-euclid.82-165-48-211.plesk.page/adduser', form);
+                    this.$router.push('/login');
+                    console.log(firebase.auth().currentUser.displayName);
                 })
                 .catch(error => {
                     this.errorMessage = error.message;
