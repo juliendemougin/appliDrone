@@ -1,10 +1,9 @@
 <template>
     <ion-page>
         <ion-content>
-            sfd
+            <div id="map"></div>
         </ion-content>
         <ion-footer class="footer">
-            <!-- <footer class="footer"> -->
             <div class="footer__border footer__border--bord">
                 <router-link to="/documents">
                     <img class="footer__icon" src="../icons/footer/icon_folder.svg" alt="image d'un dossier">
@@ -20,15 +19,13 @@
                     <img class="footer__icon" src="../icons/footer/icon_weather.svg" alt="image d'un nuage">
                 </router-link>
             </div>
-        <!-- </footer> -->
         </ion-footer>
         
     </ion-page>
 </template>
 
 <script>
-// import { defineComponent } from '@vue/composition-api'
-
+  import Leaflet from 'leaflet';
   import { useRouter } from 'vue-router';
   import { defineComponent } from 'vue';
   import { IonPage, IonContent } from '@ionic/vue';
@@ -43,6 +40,15 @@
       return {
         router: useRouter()
       }
+    },
+    ngAfterViewInit() {
+
+      this.map = new Leaflet.Map("map").setView([-25.429397, -49.271165], 10);
+      Leaflet.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: 'Map Test'
+          }).addTo(this.map);
+          console.log('ettt',this.map);
+
     }
   });
 </script>
