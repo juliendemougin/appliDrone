@@ -14,6 +14,9 @@
             <!-- <ion-item>
               <ion-img @click="socialFacebookLogin" src="../icons/icon_facebook.svg"></ion-img>
             </ion-item> -->
+            <ion-item>
+              <router-link to="/reset">Mot de passe oublié ?</router-link>
+            </ion-item>
         </ion-content>
     </ion-page>
 </template>
