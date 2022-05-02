@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
+import firebase from 'firebase/compat/app';
 
 import HomePage from '../views/HomePage.vue';
 import LoginPage from '../views/LoginPage.vue';
@@ -45,7 +46,15 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/reset',
     name: 'ResetPassword',
-    component: ResetPasswordPage
+    component: ResetPasswordPage,
+    beforeEnter(to, from, next) {
+      const user = firebase.auth().currentUser;
+      if(user) {
+        next({ name: 'dashboard' });
+      } else {
+        next();
+      }
+    }
   },
   {
     path: '/profil',
