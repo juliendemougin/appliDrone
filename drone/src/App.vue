@@ -20,7 +20,7 @@
                 <router-link class="nav__link" to="/abo" onclick="closeNav();">S'abonner</router-link>
               </li>
               <li class="nav__item">
-                <router-link class="nav__link" to="#" onclick="closeNav();">Deconnexion</router-link>
+                <router-link class="nav__link" to="#" onclick="closeNav();" @click="doLogout">Deconnexion</router-link>
               </li>
               <li class="nav__item">
                 <router-link class="nav__link" to="/contact" onclick="closeNav();">Contact</router-link>
@@ -46,11 +46,29 @@
 <script lang="ts">
 import { IonApp, IonRouterOutlet } from '@ionic/vue';
 import { defineComponent } from 'vue';
+import { useRouter } from "vue-router";
+import useFirebaseAuth from "./hooks/firebase-auth";
+
 export default defineComponent({
   name: 'App',
   components: {
     IonApp,
     IonRouterOutlet,
-  }
+  },
+
+  setup() {
+    const router = useRouter();
+    const { logout } = useFirebaseAuth();
+
+    const doLogout = async () => {
+      await logout();
+      router.options.scrollBehavior;
+      router.replace({ path: '/login', replace: true });
+    };
+
+    return {
+      doLogout
+    };
+  },
 });
 </script>
