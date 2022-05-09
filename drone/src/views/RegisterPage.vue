@@ -33,20 +33,20 @@ export default {
             nom: '',
             email: '',
             errorMessage: '',
-            token: '',
+            uid: '',
             errors: {}
         }
     },
 
     methods: {
         register () {
-            const getId = async () => {
+            const getId = () => {
                 const user = firebase.auth().currentUser;
                 if(user) {
-                    const token = await user.getIdToken(true);
-                    console.log(`Token: ${token}`)
-                    this.token = token;
-                    return this.token;
+                    const uid = user.uid;
+                    console.log(`UID: ${uid}`)
+                    this.uid = uid;
+                    return this.uid;
                 }
             }
 
@@ -66,7 +66,7 @@ export default {
                     form.append('nom', this.nom);
                     form.append('prenom', this.prenom);
                     form.append('email', this.email);
-                    form.append('fid', this.token);
+                    form.append('fid', this.uid);
                     axios.post('https://nervous-euclid.82-165-48-211.plesk.page/adduser', form);
                     this.$router.push('/login');
                     console.log(firebase.auth().currentUser.displayName);
