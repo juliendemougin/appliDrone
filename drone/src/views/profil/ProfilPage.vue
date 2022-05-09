@@ -13,15 +13,16 @@
                 <article class="drones">
                     <h2 class="drones__title">Drones</h2>
                     <div class="drones__container drone">
-                        <button class="drone__item">
-                            Mavic 3
+                        <p v-if="drones.length == 0">Vous n'avez pas de drones</p>
+                        <button class="drone__item" v-for="drone in drones" :key="drone.id">
+                            {{ drone.MODELE_DRONE }}
                             <div class="drone__img">
                                 <img class="drone__item__img" src="../../icons/icon_trashcan.svg" alt="icône poubelle">
-                                <img class="drone__item__img" src="../../icons/icon_edit.svg" alt="icône d'édition">
+                                <img @click="openModalModif(drone.ID_DRONE)" class="drone__item__img" src="../../icons/icon_edit.svg" alt="icône d'édition">
                             </div>
                         </button>
-                        <a href="#" class="drones__ajout">
-                            <img class="drones__ajout__img" src="../../icons/icon_add.svg" alt="icône ajout">
+                        <a class="drones__ajout">
+                            <img @click="openModal" class="drones__ajout__img" src="../../icons/icon_add.svg" alt="icône ajout">
                         </a>
                     </div>
                 </article>
@@ -74,7 +75,11 @@
 <script>
   import { useRouter } from 'vue-router';
   import { defineComponent } from 'vue';
-  import { IonPage, IonContent } from '@ionic/vue';
+  import { IonPage, IonContent, modalController } from '@ionic/vue';
+  import ModalDrone from './modal/ModalDrone.vue';
+  import ModifDrone from './modal/ModifDrone.vue';
+  import firebase from 'firebase/compat/app';
+  import axios from 'axios';
 
   export default defineComponent({
     name: 'ProfilPage',
@@ -82,10 +87,64 @@
       IonPage,
       IonContent
     },
-    setup() {
-      return {
-        router: useRouter()
-      }
+
+    data() {
+        return {
+            drones: [],
+            uid: '',
+            id: 0
+        }
+    },
+
+    created() {
+        const getId = () => {
+            const user = firebase.auth().currentUser;
+            if(user) {
+                const uid = user.uid;
+                console.log(`UID: ${uid}`)
+                this.uid = uid;
+                return this.uid;
+            } else {
+                console.log('Non connecté');
+            }
+        }
+
+        getId();
+        axios({
+            method: 'get',
+            url: 'https://nervous-euclid.82-165-48-211.plesk.page/user_drones/' + this.uid
+        })
+        .then(
+            function(response) {
+                this.drones = response.data;
+                console.log(response.data.length);
+                console.log(this.drones);
+            }.bind(this)
+        )
+    },
+
+    methods: {
+        async openModal() {
+            const modal = await modalController.create({
+                component: ModalDrone,
+            });
+            return modal.present();
+        },
+
+        async openModalModif(id) {
+            this.id = id;
+            const modal = await modalController.create({
+                component: ModifDrone,
+                componentProps: {
+                    id: this.id
+                }
+            });
+            return modal.present();
+        },
+
+        // removeDrone() {
+        //     axios.post('')
+        // },
     }
   });
 </script>
