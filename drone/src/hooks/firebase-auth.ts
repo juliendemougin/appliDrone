@@ -2,6 +2,7 @@ import { toRefs, reactive } from 'vue';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
+import { setPersistence } from 'firebase/auth'
 
 import FIREBASE_CONFIG from './.env.firebase';
 
