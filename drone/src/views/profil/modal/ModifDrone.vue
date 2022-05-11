@@ -1,7 +1,7 @@
 <template>
     <ion-page>
         <ion-content>
-            <form @submit.prevent="addDrone" v-for="d in drone" :key="d.id">
+            <form @submit.prevent="modifDrone" v-for="d in drone" :key="d.id">
                 <input type="text" v-model="d.MODELE_DRONE" required>
                 <input type="text" v-model="d.POIDS_DRONE" required>
                 <input type="text" v-model="d.FABRIQUANT_DRONE" required>
@@ -39,7 +39,7 @@ export default defineComponent({
     props: {
         id: Number
     },
-
+    
     data() {
         return {
             drone: [],
@@ -49,7 +49,7 @@ export default defineComponent({
             nds: '',
             uas: '',
             uid: '',
-            checked: []
+            checked: [],
         }
     },
 
@@ -58,7 +58,7 @@ export default defineComponent({
         axios.get('https://nervous-euclid.82-165-48-211.plesk.page/drone/' + this.id).then((response) => {
             this.drone = response.data;
             console.log(this.drone);
-        })
+        });
     },
 
     methods: {
@@ -75,35 +75,18 @@ export default defineComponent({
             modalController.dismiss();
         },
 
-        // addDrone: function() {
-        //     const getId = () => {
-        //         const user = firebase.auth().currentUser;
-        //         if(user) {
-        //             const uid = user.uid;
-        //             console.log(`UID: ${uid}`)
-        //             this.uid = uid;
-        //             return this.uid;
-        //         }
-        //     }
-
-        //     if(this.checked.length < 1) {
-        //         this.handleAlert("Veuillez cocher la nature de votre drone", true)
-        //     } else if(this.checked.length > 1) {
-        //         this.handleAlert("Veuillez cocher qu'une seule case")
-        //     }
-
-        //     getId();
-        //     var form = new FormData();
-        //     form.append('id', this.id[0].ID_USER);
-        //     form.append('modele', this.modele);
-        //     form.append('poids', this.poids);
-        //     form.append('fabricant', this.fabricant);
-        //     form.append('nds', this.nds);
-        //     form.append('uas', this.uas);
-        //     form.append('elec', this.elec);
-        //     axios.post('https://nervous-euclid.82-165-48-211.plesk.page/add_drone', form);
-        //     this.$router.push('/profil');
-        // }
+        modifDrone: function() {
+            var form = new FormData();
+            form.append('modele', this.modele);
+            form.append('poids', this.poids);
+            form.append('fabricant', this.fabricant);
+            form.append('nds', this.nds);
+            form.append('uas', this.uas);
+            form.append('elec', this.elec);
+            form.append('id', this.id);
+            axios.post('https://nervous-euclid.82-165-48-211.plesk.page/modif_drone', form);
+            this.$router.push('/profil');
+        }
     }
 })
 </script>
